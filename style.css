@@ -5,11 +5,13 @@
 body{
     font-family: 'Poppins', sans-serif;
     background-color: #E5E5E5;;
+    margin: 0;
 }
 main{
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 21px;
 }
 .container{
     background-color: #FFFFFF;
@@ -18,6 +20,45 @@ main{
     margin-top: 21px;
     
 }
+/* navbar starts from here  */
+.navbar{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    background-color: #562EFF;
+}
+.nav-title img{
+    width: 40.42px;
+    height: 51px;
+}
+.nav-title{
+    display: flex;
+    font-weight: 500;
+    color: white;
+    font-size: 24px;
+    line-height: 36px;
+    padding-left: 180px;
+}
+.nav-link{
+    display: flex;
+    padding-top: 20px;
+    padding-left: 90px;
+}
+.nav-img{
+    margin-top: 10px;
+}
+.title{
+    margin-left: 10px;
+}
+.link{
+    margin-top: 15px;
+}
+.link a{
+    text-decoration: none;
+    color: white;
+    font-weight: normal;
+    padding: 15px;
+}
+/* navbar ends here  */
 
 /* top players starts from here */
 .top-players{
@@ -84,30 +125,45 @@ hr{
 
 
 /* course part starts from here  */
+.course-title{
+    margin-bottom: 12px;
+    color:#562EFF;
+}
 .courses{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 27px;
 }
 
 .course-banner img{
     width: 224px;
     height: 104px;
+    padding: 15px 15px 0 15px;
 }
 .course{
-    margin: 25px;
     box-shadow: 0 5px 13px rgba(0, 0, 0, 0.05);
     border-radius: 5px;
+    height: 320px;
+    width: 255px;
+}
+.course-details{
+    padding-left:15px;
+}
+.course-details p{
+    color: #ED6B4F;
 }
 .course-info{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
+    margin: 5px;
 }
 .course-info .star .filled{
     color:#FFC014;
 }
 .course-info .star .empty{
     color:#AEAEAE;
+    opacity: 0.25;
 }
 .course-info span{
     color:  #A2A2A2;
@@ -115,4 +171,24 @@ hr{
 .course-info .clock{
     background-color: #FFE4E8;
     color: #FF4A60;
+    padding: 0 8px 0 8px;
+    border-radius: 20px;
 }
+.clock p{
+    margin: 0px;
+}
+/* media queries  */
+
+/* mobile  */
+     @media  only screen and (max-width:688px) {
+         .container{
+             width: 100%;
+         }
+         .players, .blogs, .courses{
+             grid-template-columns: repeat(1,1fr);
+            
+         }
+         .player, .blog, .course{
+            flex-direction: column;
+         }
+     }
